@@ -7,19 +7,9 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Chris Ma</copyright>
-    <lastBuildDate>Sat, 11 Aug 2018 08:51:31 +0200</lastBuildDate>
     
 	<atom:link href="https://chrismade.github.io/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>my own netlify is now life</title>
-      <link>https://chrismade.github.io/blog/my-own-netlify-is-now-life/</link>
-      <pubDate>Sat, 11 Aug 2018 08:51:31 +0200</pubDate>
-      
-      <guid>https://chrismade.github.io/blog/my-own-netlify-is-now-life/</guid>
-      <description>following the instructions on https://www.control-alt-del.org/post/serverless-blog-howto/ and fixing an issue in the config.yml the serverless blog is now life.</description>
-    </item>
     
   </channel>
 </rss>
