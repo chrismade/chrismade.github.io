@@ -18,7 +18,11 @@
       <pubDate>Sat, 11 Aug 2018 08:51:31 +0200</pubDate>
       
       <guid>https://chrismade.github.io/blog/my-own-netlify-is-now-life/</guid>
-      <description>following the instructions on https://www.control-alt-del.org/post/serverless-blog-howto/ and fixing an issue in the config.yml the serverless blog is now life.</description>
+      <description>following the instructions on https://www.control-alt-del.org/post/serverless-blog-howto/ and fixing an issue in the config.yml the serverless blog is now life.
+The CMS back-End The CMS backend with workflow and edit functions reside in three files:
+A single javascript file which incorporates every functionality which is needed
+A single configuration file config.yml which keeps all config data that is needed by the javascript CMS
+A single HTML which invokes the javascript file and which could also add custom widgets to extend the base functionality, e.</description>
     </item>
     
   </channel>
