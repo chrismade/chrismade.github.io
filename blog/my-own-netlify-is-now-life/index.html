@@ -22,10 +22,10 @@
     <meta name="twitter:title" content="my own netlify is now life" />
     
     <meta name="twitter:description" content="following the instructions on https://www.control-alt-del.org/post/serverless-blog-howto/ and fixing an issue in the config.yml the serverless blog is now life.
-The CMS back-End The CMS backend with workflow and edit functions reside in three files:
-A single javascript file which incorporates every functionality which is needed
-A single configuration file config.yml which keeps all config data that is needed by the javascript CMS
-A single HTML which invokes the javascript file and which could also add custom widgets to extend the base functionality, e." />
+The CMS Back-End The CMS backend with workflow and edit functions resides in three files:
+ A single javascript file which incorporates every functionality which is needed
+ A single configuration file config.yml which keeps all config data that is needed by the javascript CMS
+ A single HTML which invokes the javascript file and which could also add custom widgets to extend the base functionality, e." />
     <meta name="twitter:url" content="https://chrismade.github.io/blog/my-own-netlify-is-now-life/" />
     
 
@@ -103,7 +103,7 @@ A single HTML which invokes the javascript file and which could also add custom 
         },
         "datePublished": "2018-08-11",
         "dateModified": "2018-08-11",
-        "wordCount": 606,
+        "wordCount": 837,
         
     }
     </script>
@@ -168,7 +168,7 @@ html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-t
                 <header class="post-header">
                 
                     <span class="post-meta">
-                        <span class="post-date">11 Aug 2018</span> <span class="reading-time">| <span class="estimated-reading-time">3 min.</span> (<span class="word-count">606</span> words)</span></span>
+                        <span class="post-date">11 Aug 2018</span> <span class="reading-time">| <span class="estimated-reading-time">4 min.</span> (<span class="word-count">837</span> words)</span></span>
                     </span>
                 <div class="clear"></div>
                 
@@ -181,29 +181,32 @@ html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-t
 
 <p>following the instructions on <a href="https://www.control-alt-del.org/post/serverless-blog-howto/">https://www.control-alt-del.org/post/serverless-blog-howto/</a> and fixing <a href="https://github.com/marksteele/netlify-serverless-oauth2-backend/issues/3">an issue in the config.yml</a> the serverless blog is now life.</p>
 
-<h2 id="the-cms-back-end">The CMS back-End</h2>
+<h2 id="the-cms-back-end">The CMS Back-End</h2>
 
-<p>The CMS backend with workflow and edit functions reside in three files:</p>
+<p>The CMS backend with workflow and edit functions resides in three files:</p>
 
-<p>A single javascript file which incorporates every functionality which is needed</p>
+<ol>
+<li>A single javascript file which incorporates every functionality which is needed<br /></li>
+<li>A single configuration file config.yml which keeps all config data that is needed by the javascript CMS<br /></li>
+<li>A single HTML which invokes the javascript file and which could also add custom widgets to extend the base functionality, e.g. a picker which let you find and include YouTube files into your blog without copying the HTML code for embedding<br />
+<br /></li>
+</ol>
 
-<p>A single configuration file config.yml which keeps all config data that is needed by the javascript CMS</p>
-
-<p>A single HTML which invokes the javascript file and which could also add custom widgets to extend the base functionality, e.g. a picker which let you find and include YouTube files into your blog without copying the HTML code for embedding</p>
-
-<p>That's all - all execution happens in the browser - there is a little pushback as of this writing (Aug 2018) - Firefox LTS which is widely used in enterprise installations throws <a href="https://github.com/netlify/netlify-cms/issues/959">an error message which makes page editing unusable</a> - and netlify decided not to fix this. Obviously they don't have much enterprise customers at the moment. But the software is open-source, so you can fork the CMS, fix it yourself and issue a PR.</p>
+<p>That's all - all execution happens in the browser - there is a little pushback as of this writing (Dec 2017 till Aug 2018) - Firefox LTS - which is widely used in enterprise client installations - throws <a href="https://github.com/netlify/netlify-cms/issues/959">an error message which makes page editing unusable</a> - and netlify decided not to fix this. Obviously they don't have much enterprise customers at the moment. But the software is open-source, so you can <a href="https://github.com/netlify/netlify-cms">fork the CMS</a>, fix it yourself and issue a PR.</p>
 
 <h2 id="the-repository">The repository</h2>
 
-<p>As persistence layer github is used as repository - which makes it pretty easy to have versioning while not caring on scalability</p>
+<p>As persistence layer github is used as repository - which makes it pretty easy to have versioning while not worrying on scalability - which is pretty often a pain in traditional CMS solution when the number of pages is growing and lot of editing creates lots of versions. github - as we all know - was never designed as a CMS for building wesites but it is interesting to see that every use-case in source-control of software development has an equivalent in web content management - and vice versa - and how both approaches converge - for a closer look you might be interested in <a href="https://www.thoughtworks.com/insights/blog/incremental-approach-content-management-using-git">this series of blog articles</a> - which resulted in a proof-of-concept called <a href="http://hacienda.io/">hacienda.io</a> - which unfortunately haven't seen much (visible) development in the past three years - but the underlying concept and thoughts are still valid.</p>
 
 <h2 id="the-page-generator">The page generator</h2>
 
-<p>HUGO is used as page generator - offering a wide-range of freely available templates which create static sites - travisCI is called every time a change is issued in the repository master branch (publish) and travisCI invokes hugo to generate a new site - which is pretty fast</p>
+<p><a href="https://gohugo.io/">HUGO</a> is used as page generator - offering a wide-range of <a href="https://themes.gohugo.io/">freely available themes</a> which create static sites - travisCI is called every time a change is issued in the repository master branch (publish) and travisCI invokes hugo to generate a new site - which is pretty fast</p>
 
 <h2 id="the-target-destination">The target destination</h2>
 
-<p>In order to see the site live and still follow the paradigm of a serverless architecture github pages is used - so the source files are read from the github repository and the outcome of the build process is - again - stored in github in another place. Github pages take care of a valid SSL certificate and that the site appear as a regular website which you can see in your browser -</p>
+<p>In order to see the site live and still follow the paradigm of a serverless architecture github pages is used - so the source files are read from the github repository and the outcome of the build process is - again - stored in github in another place. Github pages takes care of a valid SSL certificate and that the site appear as a regular website which you can see in your browser -</p>
+
+<p>If you don't like the given URL (precisely FQDN) from github pages then you can <a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/">follow these instructions</a> to make it appear in your own custom domain - of course in this case you need to take care of the SSL certificate yourself and you may want to consider using <a href="https://letsencrypt.org/">letsencrypt</a> if you don't have a better option available.</p>
 
 <h2 id="the-authentication">The authentication</h2>
 
@@ -212,6 +215,8 @@ html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-t
 <h2 id="from-here">From here</h2>
 
 <p>There is a ready-made service you can subscribe for free on netlify.com - which is pretty convenient if you are not so interested in the technical details and just want to start quickly building a site - but putting the pieces together step-by-step yourself reveals the beauty of this architecture and get hands-on experience on state-of-the-art approaches for traditional use-cases - the use of github as source and target repository and authentication provider is a shortcut - as you are doing all operations in this single github identity - have a look into the netlify documentation in order to discover more options, e.g. use different authentication providers or manage identities yourself based on &quot;netlify identity&quot; (which is based on GoTrue API) and using a github gateway in case your authentication provider is different from github.</p>
+
+<p>It is also worth mentioning that netlify is not tied to HUGO for building your static website - for example you can also use <a href="https://www.gatsbyjs.org/">gatsby</a> if you prefer - they simply want to keep their architecture open to cope with any new development which may come tomorrow.</p>
 
               </section>
 
