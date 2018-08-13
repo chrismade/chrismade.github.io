@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Chris Ma</copyright>
-    <lastBuildDate>Sat, 11 Aug 2018 08:51:31 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 13 Aug 2018 22:42:50 +0200</lastBuildDate>
     
 	<atom:link href="https://chrismade.github.io/categories/news/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>understanding the drivers behind agile - and a warning</title>
+      <link>https://chrismade.github.io/blog/understanding-the-drivers-behind-agile-and-a-warning/</link>
+      <pubDate>Mon, 13 Aug 2018 22:42:50 +0200</pubDate>
+      
+      <guid>https://chrismade.github.io/blog/understanding-the-drivers-behind-agile-and-a-warning/</guid>
+      <description>agile projects are trendy - however, there was a missing piece - at least for me. When I learnt about &amp;quot;agile&amp;quot; and why this is better in some cases compared to traditional project management I heart the phrase &amp;quot;autonomy, mastery and purpose&amp;quot; a lot but I could see any context. If you felt the same - here comes the solution.
+A word of warning - may violate my data privacy policy Writing these blog postings I will also test the features of this system (netlify) - and on this post I will try the youtube widget - no knowing how exactly it is implemented.</description>
+    </item>
     
     <item>
       <title>my serverless blog is now life</title>
